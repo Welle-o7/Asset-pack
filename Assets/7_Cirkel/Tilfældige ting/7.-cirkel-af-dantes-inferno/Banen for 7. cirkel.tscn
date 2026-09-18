@@ -1,0 +1,152 @@
+[gd_scene format=4 uid="uid://cyj72f3yfgmhs"]
+
+[ext_resource type="Texture2D" uid="uid://bnixogua4u865" path="res://Hjerte mønt billede.png" id="1_avinl"]
+[ext_resource type="Texture2D" uid="uid://blko4qa5bext" path="res://test tile sæt for væske.png" id="1_ax1gd"]
+[ext_resource type="Texture2D" uid="uid://bpqit8vp4ypty" path="res://anden cirke2l.png" id="1_v2ylm"]
+[ext_resource type="Texture2D" uid="uid://detirfu40vvr0" path="res://Tile sæt test 1.png" id="2_q51c3"]
+[ext_resource type="Texture2D" uid="uid://dkcdu67xmf114" path="res://anden cirkel.png" id="2_uf565"]
+[ext_resource type="Texture2D" uid="uid://bm3yb5842m3mi" path="res://Tile sten.png" id="2_yot20"]
+[ext_resource type="Texture2D" uid="uid://cucia06kduvoo" path="res://sten2.png" id="5_gc8cl"]
+[ext_resource type="Texture2D" uid="uid://laulfvsfmpyl" path="res://Dane økse billede.png" id="5_p7rpd"]
+[ext_resource type="Texture2D" uid="uid://x4ejpfk73gx7" path="res://Healing potion normal.png" id="6_v2ylm"]
+[ext_resource type="Texture2D" uid="uid://b0a5we86bgg1y" path="res://blod nøgle billede.png" id="7_uf565"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bw58s"]
+size = Vector2(546, 226)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gc8cl"]
+texture = ExtResource("2_yot20")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_igl04"]
+sources/0 = SubResource("TileSetAtlasSource_gc8cl")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rtxqv"]
+texture = ExtResource("5_gc8cl")
+texture_region_size = Vector2i(32, 32)
+0:1/0 = 0
+1:1/0 = 0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4227e"]
+sources/0 = SubResource("TileSetAtlasSource_rtxqv")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kx3uh"]
+texture = ExtResource("1_ax1gd")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8v4w2"]
+sources/0 = SubResource("TileSetAtlasSource_kx3uh")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdlha"]
+texture = ExtResource("2_q51c3")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bw58s"]
+sources/1 = SubResource("TileSetAtlasSource_hdlha")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aeyqn"]
+texture = ExtResource("2_q51c3")
+texture_region_size = Vector2i(32, 32)
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_t2tur"]
+sources/0 = SubResource("TileSetAtlasSource_aeyqn")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_avinl"]
+texture = ExtResource("1_ax1gd")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8jjca"]
+sources/0 = SubResource("TileSetAtlasSource_avinl")
+
+[node name="Node2D" type="Node2D" unique_id=1923046247]
+
+[node name="AndenCirke2l" type="Sprite2D" parent="." unique_id=999623472]
+visible = false
+position = Vector2(280, -115)
+scale = Vector2(1.227941, 0.625)
+texture = ExtResource("1_v2ylm")
+
+[node name="AndenCirkel" type="Sprite2D" parent="." unique_id=1847832846]
+visible = false
+position = Vector2(281, -6)
+scale = Vector2(1.2132353, 1.205)
+texture = ExtResource("2_uf565")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2010331833]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2081221341]
+position = Vector2(276, 19)
+shape = SubResource("RectangleShape2D_bw58s")
+debug_color = Color(0.6221335, 0.48828053, 0.58670354, 0.41960785)
+
+[node name="HjerteMøntBillede" type="Sprite2D" parent="StaticBody2D" unique_id=318773957]
+texture_filter = 1
+position = Vector2(24, -57)
+texture = ExtResource("1_avinl")
+
+[node name="TileMapLayer5" type="TileMapLayer" parent="." unique_id=622114260]
+texture_filter = 2
+tile_map_data = PackedByteArray("AAAAAAIAAAAAAAAAAAACAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAIAAIAAAAAAAAAAAAKAAIAAAAAAAAAAAAMAAIAAAAAAAAAAAAOAAIAAAAAAAAAAAAQAAIAAAAAAAAAAAASAAIAAAAAAAAAAAAUAAIAAAAAAAAAAAAWAAIAAAAAAAAAAAAYAAIAAAAAAAAAAAAaAAIAAAAAAAAAAAAcAAIAAAAAAAAAAAAeAAIAAAAAAAAAAAAgAAIAAAAAAAAAAAAiAAIAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_igl04")
+
+[node name="TileMapLayer6" type="TileMapLayer" parent="." unique_id=2135824855]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAAAAEAAAAAAAAAAAACAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAAMAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAASAAEAAAAAAAAAAAAUAAEAAAAAAAAAAAAWAAEAAAAAAAAAAAAYAAEAAAAAAAAAAAAaAAEAAAAAAAAAAAAcAAEAAAAAAAAAAAAeAAEAAAAAAAAAAAAgAAEAAAAAAAAAAAAiAAEAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_4227e")
+
+[node name="TileMapLayer4" type="TileMapLayer" parent="." unique_id=458402518]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAAAAQAAAAAAAEAAAABAAQAAAAAAAEAAAACAAQAAAAAAAEAAAADAAQAAAAAAAEAAAAEAAQAAAAAAAEAAAAFAAQAAAAAAAEAAAAGAAQAAAAAAAEAAAAHAAQAAAAAAAEAAAAIAAQAAAAAAAEAAAAJAAQAAAAAAAEAAAAKAAQAAAAAAAEAAAALAAQAAAAAAAEAAAAMAAQAAAAAAAEAAAANAAQAAAAAAAEAAAAOAAQAAAAAAAEAAAAPAAQAAAAAAAEAAAAQAAQAAAAAAAEAAAARAAQAAAAAAAEAAAASAAQAAAAAAAEAAAATAAQAAAAAAAEAAAAUAAQAAAAAAAEAAAAVAAQAAAAAAAEAAAAWAAQAAAAAAAEAAAAXAAQAAAAAAAEAAAAYAAQAAAAAAAEAAAAZAAQAAAAAAAEAAAAaAAQAAAAAAAEAAAAbAAQAAAAAAAEAAAAcAAQAAAAAAAEAAAAdAAQAAAAAAAEAAAAeAAQAAAAAAAEAAAAfAAQAAAAAAAEAAAAgAAQAAAAAAAEAAAAhAAQAAAAAAAEAAAAAAAIAAAAAAAAAAAACAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAIAAIAAAAAAAAAAAAKAAIAAAAAAAAAAAAMAAIAAAAAAAAAAAAOAAIAAAAAAAAAAAAQAAIAAAAAAAAAAAASAAIAAAAAAAAAAAAUAAIAAAAAAAAAAAAWAAIAAAAAAAAAAAAYAAIAAAAAAAAAAAAaAAIAAAAAAAAAAAAcAAIAAAAAAAAAAAAeAAIAAAAAAAAAAAAgAAIAAAAAAAAAAAAiAAIAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_8v4w2")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=783649281]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAABAAAAAQAAAAEAAAADAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAHAAAAAQAAAAAAAAAJAAAAAQAAAAAAAAALAAAAAQAAAAEAAAANAAAAAQAAAAAAAAAPAAAAAQAAAAAAAAARAAAAAQAAAAAAAAATAAAAAQAAAAAAAAAVAAAAAQAAAAEAAAABAAIAAQABAAAAAAALAAIAAQABAAAAAAALAAQAAQABAAAAAAAVAAIAAQABAAAAAAAVAAQAAQABAAAAAAABAAQAAQABAAAAAAABAAYAAQABAAAAAAALAAYAAQABAAAAAAAVAAYAAQABAAAAAAAXAAAAAQAAAAAAAAAZAAAAAQAAAAAAAAAbAAAAAQAAAAAAAAAdAAAAAQAAAAAAAAAfAAAAAQAAAAEAAAAfAAIAAQABAAAAAAAfAAQAAQABAAAAAAAfAAYAAQABAAAAAAADAP7/AQABAAEAAAAFAP7/AQABAAEAAAAHAP7/AQABAAEAAAAJAP7/AQABAAEAAAAhAAAAAQAAAAAAAAANAP7/AQABAAEAAAAPAP7/AQABAAEAAAARAP7/AQABAAEAAAATAP7/AQABAAEAAAAXAP7/AQABAAEAAAAZAP7/AQABAAEAAAAbAP7/AQABAAEAAAAdAP7/AQABAAEAAAAhAP7/AQABAAEAAAA=")
+tile_set = SubResource("TileSet_bw58s")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1965428998]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAABAP7/AAABAAEAAAALAP7/AAABAAEAAAAVAP7/AAABAAEAAAAfAP7/AAABAAEAAAA=")
+tile_set = SubResource("TileSet_t2tur")
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="." unique_id=698121875]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAAAAYAAAABAAEAAAABAAYAAAABAAEAAAACAAYAAAABAAEAAAADAAYAAAABAAEAAAAEAAYAAAABAAEAAAAFAAYAAAABAAEAAAAGAAYAAAABAAEAAAAHAAYAAAABAAEAAAAIAAYAAAABAAEAAAAIAAcAAAABAAEAAAAJAAcAAAABAAEAAAAKAAcAAAABAAEAAAALAAcAAAABAAEAAAAMAAcAAAABAAEAAAANAAcAAAABAAEAAAAOAAcAAAABAAEAAAAPAAcAAAABAAEAAAAPAAYAAAABAAEAAAAQAAYAAAABAAEAAAARAAYAAAABAAEAAAASAAYAAAABAAEAAAATAAYAAAABAAEAAAAOAAYAAAABAAEAAAANAAYAAAABAAEAAAAMAAYAAAABAAEAAAALAAYAAAABAAEAAAAKAAYAAAABAAEAAAAJAAYAAAABAAEAAAAUAAYAAAABAAEAAAAVAAYAAAABAAEAAAAWAAYAAAABAAEAAAAXAAYAAAABAAEAAAAYAAYAAAABAAEAAAAZAAYAAAABAAEAAAAZAAcAAAABAAEAAAAaAAcAAAABAAEAAAAbAAcAAAABAAEAAAAcAAcAAAABAAEAAAAdAAcAAAABAAEAAAAeAAcAAAABAAEAAAAeAAYAAAABAAEAAAAdAAYAAAABAAEAAAAcAAYAAAABAAEAAAAbAAYAAAABAAEAAAAaAAYAAAABAAEAAAAfAAYAAAABAAEAAAAgAAYAAAABAAEAAAAhAAYAAAABAAEAAAAhAAcAAAABAAEAAAAgAAcAAAABAAEAAAAfAAcAAAABAAEAAAAYAAcAAAABAAEAAAAXAAcAAAABAAEAAAAWAAcAAAABAAEAAAAVAAcAAAABAAEAAAAUAAcAAAABAAEAAAATAAcAAAABAAEAAAASAAcAAAABAAEAAAARAAcAAAABAAEAAAAQAAcAAAABAAEAAAAHAAcAAAABAAEAAAAGAAcAAAABAAEAAAAFAAcAAAABAAEAAAAEAAcAAAABAAEAAAADAAcAAAABAAEAAAACAAcAAAABAAEAAAABAAcAAAABAAEAAAAAAAcAAAABAAEAAAAAAAQAAAABAAAAAAACAAQAAAABAAAAAAAEAAQAAAABAAAAAAAGAAQAAAABAAAAAAAIAAQAAAABAAAAAAAKAAQAAAABAAAAAAAMAAQAAAABAAAAAAAOAAQAAAABAAAAAAAQAAQAAAABAAAAAAASAAQAAAABAAAAAAAUAAQAAAABAAAAAAAWAAQAAAABAAAAAAAYAAQAAAABAAAAAAAaAAQAAAABAAAAAAAcAAQAAAABAAAAAAAeAAQAAAABAAAAAAAgAAQAAAABAAAAAAAiAAQAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_8jjca")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1249433680]
+offset = Vector2(275, 0)
+zoom = Vector2(2, 2)
+
+[node name="DaneØkseBillede" type="Sprite2D" parent="." unique_id=1813701161]
+texture_filter = 1
+position = Vector2(185, -57)
+texture = ExtResource("5_p7rpd")
+
+[node name="HealingPotionNormal" type="Sprite2D" parent="." unique_id=1969162668]
+texture_filter = 1
+position = Vector2(344, -59)
+texture = ExtResource("6_v2ylm")
+
+[node name="BlodNøgleBillede" type="Sprite2D" parent="." unique_id=1169446940]
+texture_filter = 1
+position = Vector2(503, -60)
+texture = ExtResource("7_uf565")
