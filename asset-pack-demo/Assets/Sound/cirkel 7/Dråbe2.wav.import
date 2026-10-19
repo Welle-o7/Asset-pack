@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://qngklrslaun5"
+path="res://.godot/imported/Dråbe2.wav-6639f1e96746bebbcf1115556a396880.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/cirkel 7/Dråbe2.wav"
+dest_files=["res://.godot/imported/Dråbe2.wav-6639f1e96746bebbcf1115556a396880.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
