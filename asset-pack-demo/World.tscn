@@ -11,6 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://47d0y8p0omkt" path="res://Assets/Sprites/enemy/cirkel 7/harpy.png" id="9_sjtuv"]
 [ext_resource type="AudioStream" uid="uid://b4nhqica8io2b" path="res://Assets/Sound/cirkel 7/Fugl.wav" id="10_fvag4"]
 [ext_resource type="AudioStream" uid="uid://qngklrslaun5" path="res://Assets/Sound/cirkel 7/Dråbe2.wav" id="11_kva58"]
+[ext_resource type="Texture2D" uid="uid://bi6oaclsh121q" path="res://Assets/lvl 8/Collectible/Fruad Chest.png" id="12_6w02q"]
+[ext_resource type="Texture2D" uid="uid://bq34f7x8c0j8k" path="res://Assets/lvl 8/Collectible/Fruad Dagger.png" id="13_1fphk"]
+[ext_resource type="Texture2D" uid="uid://csqgke8jedy5i" path="res://Assets/lvl 8/Collectible/Fruad Heart.png" id="14_sjtuv"]
+[ext_resource type="Texture2D" uid="uid://tmn5w646w8no" path="res://Assets/lvl 8/Collectible/Fruad Key.png" id="15_cvq6i"]
+[ext_resource type="AudioStream" uid="uid://bvbnpynypkjdr" path="res://Assets/lvl 8/SoundFX/Lvl8FraudBGSoundWAV.wav" id="16_6tx0c"]
+[ext_resource type="Texture2D" uid="uid://bs4lu0q5c5vxw" path="res://Assets/lvl 8/Enemy/Mimic.png" id="17_sjtuv"]
+[ext_resource type="AudioStream" uid="uid://dbeeov315voxp" path="res://Assets/Sound/cirkel 7/Skrig.wav" id="18_cvq6i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6tx0c"]
 texture = ExtResource("1_fvag4")
@@ -585,6 +592,28 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tx0c"]
+atlas = ExtResource("17_sjtuv")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5j71u"]
+atlas = ExtResource("17_sjtuv")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0joap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tx0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5j71u")
+}],
+"loop": 1,
+"name": &"attack",
+"speed": 1.0
+}]
+
 [node name="World" type="Node2D" unique_id=1443390278]
 
 [node name="background" type="TileMapLayer" parent="." unique_id=495787599]
@@ -631,6 +660,7 @@ position = Vector2(1065, -50)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="nøgle 7" unique_id=999630800]
 position = Vector2(3, 1)
 sprite_frames = SubResource("SpriteFrames_0wgrw")
+autoplay = "default"
 frame_progress = 0.2815805
 
 [node name="våben 7" type="Area2D" parent="." unique_id=1249983018]
@@ -671,3 +701,51 @@ volume_db = -5.832
 pitch_scale = 4.0
 autoplay = true
 max_distance = 150.0
+
+[node name="FruadChest" type="Sprite2D" parent="." unique_id=862764849]
+position = Vector2(1559, -44)
+scale = Vector2(0.10598221, 0.10598221)
+texture = ExtResource("12_6w02q")
+
+[node name="FruadDagger" type="Sprite2D" parent="." unique_id=357376795]
+position = Vector2(1592, -46)
+scale = Vector2(0.067005865, 0.067005865)
+texture = ExtResource("13_1fphk")
+
+[node name="FruadHeart" type="Sprite2D" parent="." unique_id=753113213]
+position = Vector2(1623, -42.000004)
+scale = Vector2(0.094748884, 0.094748884)
+texture = ExtResource("14_sjtuv")
+
+[node name="FruadKey" type="Sprite2D" parent="." unique_id=158895739]
+position = Vector2(1657, -42)
+scale = Vector2(0.0917284, 0.090955734)
+texture = ExtResource("15_cvq6i")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=195853294]
+position = Vector2(1658, -38)
+stream = ExtResource("16_6tx0c")
+volume_db = 12.635
+autoplay = true
+max_distance = 300.0
+attenuation = 0.08246924
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=244522290]
+position = Vector2(1721, -42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D2" unique_id=1958805544]
+position = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_0joap")
+animation = &"attack"
+autoplay = "attack"
+frame = 1
+frame_progress = 0.02921888
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." unique_id=1026915224]
+position = Vector2(405, -73)
+stream = ExtResource("18_cvq6i")
+volume_db = -36.935
+autoplay = true
+max_distance = 600.0
+attenuation = 0.03716272
+bus = &"Skrig"
