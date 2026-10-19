@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://u0tudnj7bbme"
+path="res://.godot/imported/Vandlyde.wav-9d2d392eb0f5b0cbe8632aca8f6daa60.sample"
+
+[deps]
+
+source_file="res://Lvl 9/SoundFX/vand/Vandlyde.wav"
+dest_files=["res://.godot/imported/Vandlyde.wav-9d2d392eb0f5b0cbe8632aca8f6daa60.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
